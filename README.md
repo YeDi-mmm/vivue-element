@@ -2,7 +2,6 @@
 
 + 安装依赖：npm install
 + 快速启动：npm run dev
-+ 项目打包：npm run build
 
 ## 技术栈
 
