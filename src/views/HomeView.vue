@@ -5,7 +5,7 @@
     <el-table-column prop="address" label="Address" />
   </el-table>
 
-  <el-row class="mb-4">
+  <el-row>
     <el-button @click="handleSetLanguage('zh')">中文</el-button>
     <el-button @click="handleSetLanguage('en')">英文</el-button>
     <el-button @click="handleSetLanguage('th')">泰国</el-button>
