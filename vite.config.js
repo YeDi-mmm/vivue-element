@@ -4,6 +4,7 @@ import vue from '@vitejs/plugin-vue'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
+import { viteMockServe } from 'vite-plugin-mock'
 
 // https://vitejs.dev/config/
 export default defineConfig(({ command, mode }) => {
@@ -18,6 +19,13 @@ export default defineConfig(({ command, mode }) => {
         }),
         Components({
           resolvers: [ElementPlusResolver()],
+        }),
+        viteMockServe({
+          // default
+          mockPath: 'mock',
+          supportTs: false,
+          localEnabled: command === 'serve',
+          prodMock: false
         }),
       ],
       resolve: {

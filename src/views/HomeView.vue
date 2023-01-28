@@ -17,7 +17,9 @@
   import Cookies from "js-cookie";
   import { useAppStore } from '@/store/index.js' //store存放语言配置
   import { useI18n } from "vue-i18n";
-  
+  import axios from "axios"
+  import { onMounted, onUnmounted } from 'vue'
+
   const { locale } = useI18n();
   const langstore = useAppStore();
   function handleSetLanguage(val) {
@@ -27,4 +29,10 @@
   }
   // 表格数据
   const tableData = []
+
+  onMounted(() => {
+    axios.get('/helloWorld').then((res) => {
+      console.log(res);
+    });
+  });
 </script>
