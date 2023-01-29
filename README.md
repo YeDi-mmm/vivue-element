@@ -13,3 +13,4 @@
 + 🛡️ ESLint - 代码规范
 + 🌏 vue-i18n - 语言国际化
 + 💻 element-plus - UI库，能够快速开发
++ 🔗 mockjs - 让前端工程师能够独立于后端进行开发
